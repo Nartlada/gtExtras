@@ -117,18 +117,18 @@ gt_plt_bar_stack <- function(gt_object,
             )
           ) +
           geom_col(position = position, color = "white", width = 1) +
-          geom_text(
-            aes(label = fmt_fn(x)),
-            hjust = 0.5,
-            size = 3,
-            family = "mono",
-            position = if (position == "fill") {
-              position_fill(vjust = .5)
-            } else if (position == "stack") {
-              position_stack(vjust = .5)
-            },
-            color = "white"
-          ) +
+          # geom_text(
+          #   aes(label = fmt_fn(x)),
+          #   hjust = 0.5,
+          #   size = 3,
+          #   family = "mono",
+          #   position = if (position == "fill") {
+          #     position_fill(vjust = .5)
+          #   } else if (position == "stack") {
+          #     position_stack(vjust = .5)
+          #   },
+          #   color = "white"
+          # ) +
           scale_x_continuous(
             expand = if (position == "stack") {
               expansion(mult = c(0, 0.1))
